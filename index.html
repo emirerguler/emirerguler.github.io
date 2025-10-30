@@ -542,17 +542,10 @@
             
             if (html.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
             } else {
                 localStorage.setItem('theme', 'light');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
             }
         }
-        
-        //themeToggle.addEventListener('click', toggleTheme);
-        mobileThemeToggle.addEventListener('click', toggleTheme);
         
         // Form submission
         const contactForm = document.getElementById('contact-form');
@@ -616,6 +609,7 @@
     </script>
 </body>
 </html>
+
 
 
 
