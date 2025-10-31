@@ -526,46 +526,33 @@
         
         if (savedTheme === 'dark') {
             html.classList.add('dark');
-            //themeIcon.classList.replace('fa-moon', 'fa-sun');
-            mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
         }
-        
         function toggleTheme() {
             html.classList.toggle('dark');
             
             if (html.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
+
             } else {
                 localStorage.setItem('theme', 'light');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
             }
-        }
-        
-        //themeToggle.addEventListener('click', toggleTheme);
-        //mobileThemeToggle.addEventListener('click', toggleTheme);
-        
+        }      
         // Form submission
         const contactForm = document.getElementById('contact-form');
         const formSuccess = document.getElementById('form-success');
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
             // Simulate form submission
             setTimeout(() => {
                 contactForm.reset();
                 formSuccess.classList.remove('hidden');
-                
                 // Hide success message after 5 seconds
                 setTimeout(() => {
                     formSuccess.classList.add('hidden');
                 }, 5000);
             }, 1000);
         });
-        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -579,7 +566,6 @@
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
-                    
                     // Close mobile menu if open
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
@@ -587,7 +573,6 @@
                 }
             });
         });
-        
         // Animate skill bars when they come into view
         const skillBars = document.querySelectorAll('.skill-bar');
         
@@ -609,3 +594,4 @@
     </script>
 </body>
 </html>
+
