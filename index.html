@@ -82,19 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="#home" class="bg-indigo-50 text-indigo-700 block px-3 py-2 rounded-md text-base font-medium dark:bg-gray-700 dark:text-indigo-300">Anasayfa</a>
-                <a href="#about" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium dark:text-gray-300 dark:hover:bg-gray-700">Hakkımda</a>
-                <a href="#projects" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium dark:text-gray-300 dark:hover:bg-gray-700">Projeler</a>
-                <a href="#contact" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium dark:text-gray-300 dark:hover:bg-gray-700">İletişim</a>
-                <div class="px-3 py-2">
-                    <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <i class="fas fa-moon text-gray-700 dark:text-yellow-300" id="mobile-theme-icon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+       
     </nav>
     <section id="home" class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,20 +498,7 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-        const mobileThemeIcon = document.getElementById('mobile-theme-icon');
-        const html = document.documentElement;
         
         // Check for saved theme preference or use system preference
         const savedTheme = localStorage.getItem('theme') || 
@@ -531,8 +506,6 @@
         
         if (savedTheme === 'dark') {
             html.classList.add('dark');
-            //themeIcon.classList.replace('fa-moon', 'fa-sun');
-            mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
         }
         
         function toggleTheme() {
@@ -540,17 +513,10 @@
             
             if (html.classList.contains('dark')) {
                 localStorage.setItem('theme', 'dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                mobileThemeIcon.classList.replace('fa-moon', 'fa-sun');
             } else {
                 localStorage.setItem('theme', 'light');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                mobileThemeIcon.classList.replace('fa-sun', 'fa-moon');
             }
         }
-        
-        //themeToggle.addEventListener('click', toggleTheme);
-        //mobileThemeToggle.addEventListener('click', toggleTheme);
         
         // Form submission
         const contactForm = document.getElementById('contact-form');
@@ -614,6 +580,7 @@
     </script>
 </body>
 </html>
+
 
 
 
