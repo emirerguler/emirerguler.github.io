@@ -501,8 +501,7 @@
 
         
         // Check for saved theme preference or use system preference
-        const savedTheme = localStorage.getItem('theme') || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         
         if (savedTheme === 'dark') {
             html.classList.add('dark');
@@ -580,6 +579,7 @@
     </script>
 </body>
 </html>
+
 
 
 
